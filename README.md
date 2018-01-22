@@ -1,24 +1,6 @@
-# README
+A simple web app to take notes, built using Ruby on Rails.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Dependencies Used:
+devise - https://github.com/plataformatec/devise
+rspec - https://github.com/rspec/rspec-rails
+shoulda-matchers - https://github.com/thoughtbot/shoulda-matchers
