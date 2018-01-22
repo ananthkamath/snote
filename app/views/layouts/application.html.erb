@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Snote</title>
+    <title>Welcome to Snote</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-  	<header>
-  	  <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
+    <header>
+      <% if user_signed_in? %>
+      <p>Hello <%= current_user[:email] %> <%= link_to "Log Out", destroy_user_session_path, :method => :delete %></p></br>
+      <% end %>
     </header>
     <%= yield %>
   </body>
