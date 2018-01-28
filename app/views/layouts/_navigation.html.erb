@@ -1,0 +1,8 @@
+<nav class="navbar fixed-top navbar-dark bg-dark">
+  <% if user_signed_in? %>
+  <p class="navbar-brand"><%= current_user[:email] %>'s Notes</p>
+  <%= button_to "Log Out", destroy_user_session_path, class:"btn btn-warning", :method => :delete %>
+  <% else %>
+  <p class="navbar-brand">Login To See Your Notes</p>
+  <% end %>
+</nav>

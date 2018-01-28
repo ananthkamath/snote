@@ -1,6 +1,9 @@
 <h1>Edit Current Note</h1>
 
 <%= render 'form', note: @note %>
-
-<%= link_to 'Show', @note %> |
-<%= link_to 'Back', notes_path %>
+<table>
+<tr>
+<td><%= button_to 'Show', @note, class:"btn btn-info", method: :get %></td>
+<td><%= button_to 'Back', notes_path, class:"btn btn-danger", method: :get %></td>
+</tr>
+</table>
