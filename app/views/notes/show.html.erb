@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <p>
   <strong>Title:</strong>
   <%= @note.title %>
@@ -14,6 +12,9 @@
   <strong>User:</strong>
   <%= @note.user.email %>
 </p>
-
-<%= link_to 'Edit', edit_note_path(@note) %> |
-<%= link_to 'Back', notes_path %>
+<table>
+<tr>
+<td><%= button_to 'Edit', edit_note_path(@note), class:"btn btn-primary", method: :get %></td>
+<td><%= button_to 'Back', notes_path, class:"btn btn-danger", method: :get %></td>
+</tr>
+</table>

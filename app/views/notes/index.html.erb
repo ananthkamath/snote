@@ -1,6 +1,5 @@
-<p id="notice"><%= notice %></p>
-<h1>Notes</h1>
-<table>
+<div>
+<table class="table table-dark">
   <thead>
     <tr>
       <th>Title</th>
@@ -16,13 +15,14 @@
           <td><%= note.title %></td>
           <td><%= note.body %></td>
           <td><%= note.user.email %></td>
-          <td><%= link_to 'Show', note %></td>
-          <td><%= link_to 'Edit', edit_note_path(note) %></td>
-          <td><%= link_to 'Destroy', note, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= button_to 'Show', note, class:"btn btn-info", method: :get %></td>
+          <td><%= button_to 'Edit', edit_note_path(note), class:"btn btn-primary", method: :get %></td>
+          <td><%= button_to 'Destroy', note, class:"btn btn-danger", method: :delete, data: { confirm: 'Are you sure?' } %></td>
         </tr>
       <% end %>
     <% end %>
   </tbody>
 </table>
 <br>
-<%= link_to 'New Note', new_note_path %>
+</div>
+<%= button_to 'New Note', new_note_path, class:"btn btn-success", method: :get %>
