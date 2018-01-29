@@ -1,3 +1,9 @@
-[master ca161cc] Updated Gemfile with gem pg,
- 1 file changed, 2 insertions(+)
- create mode 100644 1.0.0
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+	modified:   Gemfile
+
+Untracked files:
+	=
+
+no changes added to commit
