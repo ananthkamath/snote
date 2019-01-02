@@ -14,6 +14,7 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 gem 'devise'
+gem 'dotenv-rails'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -31,7 +32,7 @@ group :development do
 end
 
 group :production do
-  gem 'mysql2'
+  gem 'mysql2', '< 0.5'
 end
 
 source 'https://rails-assets.org' do
