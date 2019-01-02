@@ -24,8 +24,8 @@ test:
 production:
   adapter: 'mysql2'
   host: localhost
-  database: <%= ENV.fetch('SNOTE_DB_DATABASE') %>
-  username: <%= ENV.fetch('SNOTE_DB_USER') %>
-  password: <%= ENV.fetch('SNOTE_DB_PASSWORD') %>
+  database: <%= ENV.fetch("SNOTE_DB_DATABASE") %>
+  username: <%= ENV.fetch("SNOTE_DB_USER") %>
+  password: <%= ENV.fetch("SNOTE_DB_PASSWORD") %>
   encoding: utf8
   pool: 5
