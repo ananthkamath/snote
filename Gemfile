@@ -15,6 +15,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 gem 'devise'
 gem 'dotenv-rails'
+gem 'mysql2', '< 0.5'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -22,7 +23,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'sqlite3'
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
@@ -32,7 +32,6 @@ group :development do
 end
 
 group :production do
-  gem 'mysql2', '< 0.5'
 end
 
 source 'https://rails-assets.org' do
