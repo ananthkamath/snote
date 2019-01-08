@@ -16,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'devise'
 gem 'dotenv-rails'
 gem 'mysql2', '< 0.5'
+gem 'rollbar'
 
 group :development, :test do
   gem 'rspec-rails'

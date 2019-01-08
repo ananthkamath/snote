@@ -129,6 +129,8 @@ GEM
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
+    rollbar (2.18.2)
+      multi_json
     rspec-core (3.7.1)
       rspec-support (~> 3.7.0)
     rspec-expectations (3.7.0)
@@ -208,6 +210,7 @@ DEPENDENCIES
   rails-assets-bootstrap!
   rails-assets-jquery!
   rails-assets-tether!
+  rollbar
   rspec-rails
   sass-rails (~> 5.0)
   shoulda-matchers
