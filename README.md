@@ -46,7 +46,7 @@ docker-compose run
 docker exec -it snote_app_1 bundle exec rake db:migrate
 ```
 
-## To Access The App
+## To Access The App On Local
 [Snote](http://localhost:3000/)
 
 ## To Run The Tests
