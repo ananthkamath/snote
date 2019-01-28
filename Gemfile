@@ -19,8 +19,18 @@ gem 'mysql2', '< 0.5'
 gem 'rollbar'
 
 group :development, :test do
+  # Use RSpec for specs
   gem 'rspec-rails'
+  # Use Should Matchers for testing helpers
   gem 'shoulda-matchers'
+  # Use Factory Bot for generating random test data
+  gem 'factory_bot_rails'
+  # Use Faker to generate fake data for tests
+  gem 'faker'
+  # Database cleaner to clear database after you run rspec
+  gem 'database_cleaner'
+  # Debugger for Ruby
+  gem 'byebug'
 end
 
 group :development do
