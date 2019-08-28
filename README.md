@@ -37,7 +37,7 @@ cp .env.example .env.development.local
 #### 4. Start the app
 
 ```
-docker-compose run
+docker-compose up
 ```
 
 #### 5. Run the migrations
