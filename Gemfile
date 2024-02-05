@@ -17,6 +17,7 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'mysql2', '< 0.5'
 gem 'rollbar'
+gem 'tzinfo-data'
 
 group :development, :test do
   # Use RSpec for specs

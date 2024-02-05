@@ -12,7 +12,10 @@ services:
       - ./files/mysql/:/docker-entrypoint-initdb.d/
 
   app:
-    build: .
+    # For building via local code use below and comment out the image field
+    # build: .
+    image: ananthkamath/snote:v1
+    env_file: .env.development.local
     environment:
       RAILS_ENV: development
     volumes:
@@ -22,4 +25,3 @@ services:
       - "3000:3000"
     depends_on:
       - db
-

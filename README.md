@@ -43,7 +43,7 @@ docker-compose up
 #### 5. Run the migrations
 
 ```
-docker exec -it snote_app_1 bundle exec rake db:migrate
+docker exec -it snote-app-1 bundle exec rake db:migrate
 ```
 
 ## To Access The App On Local
