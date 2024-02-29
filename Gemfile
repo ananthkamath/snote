@@ -5,27 +5,27 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.4'
+gem 'rails', '~> 7.0.8', '>= 7.0.8.1'
 gem 'puma', '~> 3.7'
-gem 'sass-rails', '~> 5.0'
+gem 'sass-rails', '~> 5.0', '>= 5.0.8'
 gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.2'
+gem 'coffee-rails', '~> 5.0', '>= 5.0.0'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
-gem 'devise'
-gem 'dotenv-rails'
+gem 'devise', '>= 4.7.0'
+gem 'dotenv-rails', '>= 2.7.6'
 gem 'mysql2', '< 0.5'
 gem 'rollbar'
 gem 'tzinfo-data'
 
 group :development, :test do
   # Use RSpec for specs
-  gem 'rspec-rails'
+  gem 'rspec-rails', '>= 3.8.0'
   # Use Should Matchers for testing helpers
   gem 'shoulda-matchers'
   # Use Factory Bot for generating random test data
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '>= 5.0.0'
   # Use Faker to generate fake data for tests
   gem 'faker'
   # Database cleaner to clear database after you run rspec
@@ -36,7 +36,7 @@ end
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+  gem 'web-console', '>= 3.6.0'
   gem 'listen', '>= 3.0.5', '< 3.2'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
