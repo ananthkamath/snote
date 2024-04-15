@@ -1,0 +1,41 @@
+# This workflow uses actions that are not certified by GitHub.
+# They are provided by a third-party and are governed by
+# separate terms of service, privacy policy, and support
+# documentation.
+
+name: Endor Labs
+on:
+  push:
+    branches: [ "add-endor-labs-scan" ]
+  pull_request:
+    branches: [ "master" ]
+  # schedule:
+  #   - cron: '29 0 * * 2'
+jobs:
+  scan:
+    permissions:
+      security-events: write # Used to upload sarif artifact to GitHub
+      contents: read # Used to checkout a private repository by actions/checkout.
+      actions: read # Required for private repositories to upload sarif files. GitHub Advanced Security licenses are required.
+      id-token: write # Used for keyless authentication to Endor Labs
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Endor Labs scan pull request
+      if: github.event_name == 'pull_request'
+      uses: endorlabs/github-action@b51bd06466b545f01a6ac788e3e1147695d3936c
+      with:
+        namespace: "infinitekamath"
+        sarif_file: findings.sarif
+    - name: Endor Labs scan monitor
+      if: github.event_name == 'push'
+      uses: endorlabs/github-action@b51bd06466b545f01a6ac788e3e1147695d3936c
+      with:
+        namespace: "infinitekamath"
+        ci_run: "false"
+        sarif_file: findings.sarif
+    - name: Upload SARIF to github
+      uses: github/codeql-action/upload-sarif@9885f86fab4879632b7e44514f19148225dfbdcd
+      with:
+        sarif_file: findings.sarif
